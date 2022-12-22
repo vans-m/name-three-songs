@@ -1,52 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { createRoot } from 'react-dom/client'
-import { unstable_batchedUpdates } from 'react-dom'
-import { Provider } from 'react-redux'
-import AppRouter from './routers/AppRouter'
-import configureStore from './store/configureStore'
-import LoadingPage from './components/LoadingPage'
-import 'normalize.css/normalize.css'
-import './styles/styles.scss'
-import './firebase/firebase'
-import 'redux-thunk'
-import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from './firebase/firebase'
-import { login, logout } from './actions/auth'
+import logo from './logo.svg';
+import './App.css';
 
-const store = configureStore()
-
-const App = () => {
-	const [gUser, setGUser] = useState(undefined)
-	const [loading, setLoading] = useState(true)
-
-	useEffect(() => {
-		const unsub = onAuthStateChanged(auth, (user) => {
-			unstable_batchedUpdates(() => {
-				setGUser(user)
-				if (user) {
-					store.dispatch(login(auth.currentUser.uid))
-					store.dispatch(startSetExpenses())
-					setLoading(false)
-				} else {
-					store.dispatch(logout())
-					setLoading(false)
-				}
-			})
-		})
-
-		return unsub
-	}, [])
-
-	if (loading) {
-		return <LoadingPage />
-	}
-
-	return (
-		<Provider store={store}>
-			<AppRouter user={gUser} />
-		</Provider>
-	)
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-const root = createRoot(document.getElementById('app'))
-root.render(<App />)
+export default App;
