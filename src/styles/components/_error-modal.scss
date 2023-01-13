@@ -1,0 +1,31 @@
+.modal-wrapper {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255,0.45);
+  cursor:not-allowed;
+}
+
+.modal-content {
+  cursor: default;
+  background-color: $dark-grey;
+  border-radius: 0.5rem;
+  box-shadow: 7px 8px 3rem 0rem $mid-grey;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-l;
+  a {
+    margin-top: 1rem;
+  }
+  span {
+    font-size: $font-size-m;
+    color: $light-grey;
+    text-align: center;
+  }
+}

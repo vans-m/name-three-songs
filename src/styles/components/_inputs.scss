@@ -1,0 +1,17 @@
+.text-input {
+  background: $dark-grey url('../../img/search.png') no-repeat 96% 0.55rem / 16px;
+  border-radius: 2rem;
+  border: 2px solid $light-grey;
+  color: $off-white;
+  font-size: $font-size-m;
+  line-height: $font-size-m;
+  font-weight: 300;
+  padding: 0.5rem 2rem 0.25rem 0.75rem;
+  width: 100%;
+  margin-top: 40vh;
+  transition: margin-top 300ms ease-in;
+}
+
+.focused {
+  margin-top: 0;
+}

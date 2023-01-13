@@ -1,0 +1,21 @@
+.rectangle {
+  background-color: $green;
+  border: 1px solid $green;
+  height: 6px;
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  width: 130px;
+  z-index: -1;
+}
+
+.rectangle-login {
+  background-color: $green;
+  border: 1px solid $green;
+  bottom: 1.75rem;
+  height: 15px;
+  left: 46%;
+  position: absolute;
+  width: 130px;
+  z-index: -1;
+}

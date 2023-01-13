@@ -1,0 +1,41 @@
+.header {
+  margin-bottom: 4rem;
+}
+
+.header__title {
+  color: $off-white;
+  font-size: 1.75rem;
+}
+
+.header__title--login {
+  display: grid;
+  flex: content;
+  flex-direction: column;
+  text-align: left;
+  text-decoration: none;
+  .big {
+    font-size: 4.5rem;
+    margin-bottom: -1.5rem;
+    margin-top: -1.5rem;
+    padding: 0;
+    position: relative;
+  }
+  .small {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__title--link {
+  color: inherit;
+  text-decoration: inherit;
+  position: relative;
+}
