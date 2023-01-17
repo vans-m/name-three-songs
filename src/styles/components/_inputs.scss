@@ -8,10 +8,27 @@
   font-weight: 300;
   padding: 0.5rem 2rem 0.25rem 0.75rem;
   width: 100%;
-  margin-top: 40vh;
-  transition: margin-top 300ms ease-in;
+  
 }
 
-.focused {
-  margin-top: 0;
+.message-input {
+  font-size: $font-size-m;
+  color: $light-grey;
+  text-align: center;
+  display: block;
+  margin-top: 10vh;
 }
+
+.form-control {
+  margin-top: 40vh;
+  transition: margin-top 300ms ease-in;
+  &.focused {
+    margin-top: 0;
+  }
+  label {
+    padding-left: 0.75rem;
+    font-size: $font-size-m;
+    color: $light-grey;
+  }
+}
+

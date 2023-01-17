@@ -8,6 +8,7 @@ import { SPOTIFY_AUTH_HREF } from '../constants/spotify'
 import Loader from './loader'
 import useDebounce from '../hooks/useDebounce'
 import useSearchSpotify from '../hooks/useSearchSpotify'
+import SearchInput from './SearchInput'
 
 const SearchBox = () => {
 	const [searchKey, setSearchKey] = useState('')
@@ -16,6 +17,7 @@ const SearchBox = () => {
 	const navigate = useNavigate()
 	const { setArtist } = useContext(SelectedArtistContext)
 	const debouncedSearch = useDebounce(searchKey, 500)
+	const hasResults = debouncedSearch && !artists.length
 
 	const { data, isLoading, isTokenExpired, hasError } = useSearchSpotify('https://api.spotify.com/v1/search', {
 		q: debouncedSearch,
@@ -45,15 +47,16 @@ const SearchBox = () => {
 
 	return (
 		<main className="container">
-			<input
-				type="text"
-				className={isFocused ? 'text-input focused' : 'text-input'}
-				onBlur={manageOnBlur}
-				onFocus={() => setIsFocused(true)}
-				onChange={(e) => setSearchKey(e.target.value)}
-			/>
-			{isLoading && <Loader />}
-			{artists && (
+			<form>
+				<SearchInput
+					isFocused={isFocused}
+					onBlur={manageOnBlur}
+					onFocus={() => setIsFocused(true)}
+					onChange={(e) => setSearchKey(e.target.value)}
+				/>
+			</form>
+			{hasResults && <span className="message-input">No match found</span>}
+			{artists && !isLoading ? (
 				<ul className="results-list">
 					{artists.map((artist) => (
 						<li key={artist.id}>
@@ -63,6 +66,8 @@ const SearchBox = () => {
 						</li>
 					))}
 				</ul>
+			) : (
+				<Loader />
 			)}
 			<ErrorModal
 				show={isTokenExpired}
