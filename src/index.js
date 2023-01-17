@@ -14,7 +14,7 @@ const App = () => {
 	useEffect(() => {
 		updateToken(setToken)
 	}, [])
-
+	// This is a trial for a showcase
 	const logout = () => {
 		setToken('')
 		window.localStorage.removeItem('token')
