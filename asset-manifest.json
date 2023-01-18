@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/name-three-songs/static/css/main.4f3e83c7.css",
-    "main.js": "/name-three-songs/static/js/main.44be5d47.js",
+    "main.js": "/name-three-songs/static/js/main.2902b573.js",
     "static/media/spotify-logo.png": "/name-three-songs/static/media/spotify-logo.edab964610a665789e4b.png",
     "index.html": "/name-three-songs/index.html",
     "main.4f3e83c7.css.map": "/name-three-songs/static/css/main.4f3e83c7.css.map",
-    "main.44be5d47.js.map": "/name-three-songs/static/js/main.44be5d47.js.map"
+    "main.2902b573.js.map": "/name-three-songs/static/js/main.2902b573.js.map"
   },
   "entrypoints": [
     "static/css/main.4f3e83c7.css",
-    "static/js/main.44be5d47.js"
+    "static/js/main.2902b573.js"
   ]
 }
