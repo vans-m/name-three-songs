@@ -2,7 +2,7 @@
 
 ### Here's the login details to test the app:
 Username: m.vanessa.dev@gmail.com\
-Password: Name3songs\
+Password: Name3songs
 ###### Check it out at https://vans-m.github.io/name-three-songs/
 
 ## A little backstory
