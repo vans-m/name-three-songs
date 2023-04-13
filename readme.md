@@ -8,7 +8,7 @@ Password: Name3songs
 ## A little backstory
 It all started in a pub, having a pint with friends.\
 We were chatting about the trend of wearing heavy metal band t-shirts.\
-Being big metalheads, they suggested using the old "name three songs" method to tell apart who's a real fan and who is not, but I had to disagree: I am terrible at remembering songs titles, so I would not be able to "name three songs" and be considered a poser!
+Being big metalheads, they suggested using the old "name three songs" method to tell who's a real fan and who is not, but I had to disagree: I am terrible at remembering songs titles, so I would not be able to "name three songs" and be considered a poser!
 
 Hearing that (and knowing I'm a developer), one of them suggested "you should create an app that helps you with that"!\
 ...and here we are now!
