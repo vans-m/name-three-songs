@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Welcome to "Name Three Songs"!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Here's the login details to test the app:
+Username: m.vanessa.dev@gmail.com\
+Password: Name3songs\
+###### Check it out at https://vans-m.github.io/name-three-songs/
 
-## Available Scripts
+## A little backstory
+It all started in a pub, having a pint with friends.\
+We were chatting about the trend of wearing heavy metal band t-shirts.\
+Being big metalheads, they suggested using the old "name three songs" method to tell apart who's a real fan and who is not, but I had to disagree: I am terrible at remembering songs titles, so I would not be able to "name three songs" and be considered a poser!
 
-In the project directory, you can run:
+Hearing that (and knowing I'm a developer), one of them suggested "you should create an app that helps you with that"!\
+...and here we are now!
 
-### `npm start`
+## How to use it
+The app is pretty much straightforward:\
+once you log in just type in the name of the band you're searching for, and see their top three songs!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## The tech behind it
+The app is built in React, and all the styling is done in Scss.\
+I have used the Spotify API to get the data needed, however only pre-authorised Spotify accounts can access the API (hence the login page and the generic user provided).\
+The biggest challenge was ensuring a uniform behaviour across the whole app when the session expired, being a two-pages app I solved by creating a context on top of the routing with a token state, to automatically bring the user back to the login page when the token has expired.
